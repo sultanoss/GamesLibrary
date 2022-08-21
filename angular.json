@@ -110,5 +110,7 @@
       }
     }
   },
-  "defaultProject": "gamesLibrary"
+  "cli": {
+    "analytics": false
+  }
 }
