@@ -14,15 +14,27 @@
 </div>
 
 <div class="games">
-  <div class="game">
-    <div class="game-thumbnail-container">
-      <img class="game-thumbnail" src="assets/img/image.img.jpg" alt="thumbnail" />
+  <ng-container *ngFor="let game of games">
+    <div class="game">
+      <div class="game-thumbnail-container">
+        <img
+          *ngIf="game.background_image"
+          class="game-thumbnail"
+          src="{{ game.background_image }}"
+          alt="thumbnail"
+        />
+        <p *ngIf="!game.background_image" class="game-name">No image</p>
+      </div>
+      <div class="game-description">
+        <p class="game-name">{{ game.name }}</p>
+        <div class="game-platforms">
+          <img
+            *ngFor="let gamePlatform of game.parent_platforms"
+            class="game-platform"
+            src="assets/img/platforms/{{ gamePlatform.platform.slug }}.svg"
+          />
+        </div>
+      </div>
     </div>
-    <div class="game-description">
-      <p class="game-name">Name</p>
-    </div>
-    <div class="game-platforms">
-      <img src="assets/img/need-for-speed-heat-new-800x500-3.jpg"/>
-    </div>
-  </div>
+  </ng-container>
 </div>
