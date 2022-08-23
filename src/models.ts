@@ -1,7 +1,8 @@
 export interface Game {
+  id:string;
   background_image: string;
   name: String;
-  release: string;
+  released: string;
   metacritic_url: string;
   website: string;
   description: string;
@@ -15,35 +16,35 @@ export interface Game {
 }
 
 export interface APIResponse<T> {
-results:Array<T>
+  results: Array<T>;
 }
 
-interface Genre{
-  name:string
+interface Genre {
+  name: string;
 }
 
-interface ParentPlatform{
-  platform:{
-    slug:string
-  }
+interface ParentPlatform {
+  platform: {
+    slug: string;
+  };
 }
 
-interface Publishers{
-  name:string;
+interface Publishers {
+  name: string;
 }
 
-interface Rating{
-  id:number;
-  count:number;
-  title:string
+interface Rating {
+  id: number;
+  count: number;
+  title: string;
 }
 
-interface Screenshots{
-  image:string;
+interface Screenshots {
+  image: string;
 }
 
-interface Trailer{
-  data:{
-    max:string
-  }
+interface Trailer {
+  data: {
+    max: string;
+  };
 }
