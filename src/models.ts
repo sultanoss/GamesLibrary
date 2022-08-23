@@ -1,5 +1,6 @@
 export interface Game {
   id:string;
+  rating:any;
   background_image: string;
   name: String;
   released: string;

@@ -15,6 +15,9 @@
             >{{ genre.name }}<span *ngIf="!last">, </span></span
           >
         </p>
+        <div class="rating" >
+          <span>Game Rating: {{ game.rating }}</span>
+        </div>
       </div>
     </div>
 
@@ -22,9 +25,6 @@
       <div *ngFor="let screenshot of game.screenshots">
         <img [src]="screenshot.image" />
       </div>
-    </div>
-    <div class="rating" *ngFor="let rating of game.ratings">
-      <span>Title:{{ rating.title }}, Count:{{ rating.count }}.</span>
     </div>
   </div>
 </div>

@@ -1,7 +1,17 @@
+mat-label{
+  padding: 5px;
+}
+
 .filters {
   max-width: 1200px;
   margin: 20px auto;
   padding-left: 20px;
+  @media(max-width: 550px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+  }
 }
 
 ::ng-deep {
@@ -34,6 +44,9 @@
   justify-content: center;
   max-width: 1200px;
   margin: 20px auto;
+  @media(max-width: 550px){
+    margin-top: 75px;
+  }
 }
 
 .game{
